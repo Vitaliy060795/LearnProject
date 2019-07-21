@@ -16,7 +16,7 @@ namespace ConsoleApp1
 
         static int AddNambers(int a, int b)
         {
-            Console.Read();
+            Console.ReadKey();
             return a + b;
         }
     }
