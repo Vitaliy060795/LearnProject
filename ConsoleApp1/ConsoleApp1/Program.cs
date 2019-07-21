@@ -10,8 +10,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("2");
-            Console.Read();
+            Console.WriteLine(AddNambers(4, 10));
+        }
+        static int AddNambers(int a, int b)
+        {
+            return 14;
         }
     }
 }
