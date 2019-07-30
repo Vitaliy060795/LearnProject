@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
 
 namespace ConsoleApp1
 {
@@ -10,14 +12,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(AddNambers(4, 10));
-
+            Console.Title = "Fibonacci number";
+            var width = Console.WindowWidth;
+            string text = "Find the n - th Fibonacci number";
+            var padding = width / 2 + text.Length / 2;
+            Console.WriteLine("{0," + padding + "}", text);
+            Console.WriteLine();
+            Console.WriteLine("Enter integer values ​​to determine the order of the Fibonacci number: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            int temp = fib(num);
+            Console.WriteLine(temp);
+            Console.Read();
         }
 
-        static int AddNambers(int a, int b)
+        static int fib(int n)
         {
-            Console.ReadKey();
-            return a + b;
+            if (n < 2 ) return n;
+            return fib(n - 1) + fib(n - 2);
         }
-    }
+
+    }   
 }
