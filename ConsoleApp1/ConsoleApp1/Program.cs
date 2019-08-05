@@ -27,8 +27,6 @@ namespace ConsoleApp1
             TimeSpan ts = stopWatch.Elapsed;
             double diffMs = (stopWatch.ElapsedTicks * 1000.0) / Stopwatch.Frequency;
             Console.WriteLine("MicroSecund " + diffMs);
-            Console.WriteLine(string.Format("Fibonacci number of order {0} = {1}" + '\n' + "Elapsed time {2:00}:{3:00}:{4:00}.{5:00}", num,temp, ts.Hours, ts.Minutes, ts.Seconds,
-            ts.Milliseconds / 10));
             Console.Read();
         }
 
@@ -40,9 +38,7 @@ namespace ConsoleApp1
 
        static int fib_n(int n)
         {
-            //F(n)
             int x = 1;
-            //F(n-1)
             int y = 0;
             for (int i = 0; i < n; i++)
             {
