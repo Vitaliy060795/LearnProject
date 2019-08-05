@@ -17,15 +17,16 @@ namespace ConsoleApp1
             string text = "Find the n - th Fibonacci number";
             var padding = width / 2 + text.Length / 2;
             Console.WriteLine("{0," + padding + "}", text + '\n');
-            Stopwatch stopWatch = new Stopwatch();
             Console.WriteLine("Enter integer values ​​to determine the order of the Fibonacci number using recursion: ");
             int.TryParse(Console.ReadLine(), out int num);
+            Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             //int temp = fib(num);
             int temp = fib_n(num);
-            Console.WriteLine("Hotfix branch");
             stopWatch.Stop();
             TimeSpan ts = stopWatch.Elapsed;
+            double diffMs = (stopWatch.ElapsedTicks * 1000.0) / Stopwatch.Frequency;
+            Console.WriteLine("MicroSecund " + diffMs);
             Console.WriteLine(string.Format("Fibonacci number of order {0} = {1}" + '\n' + "Elapsed time {2:00}:{3:00}:{4:00}.{5:00}", num,temp, ts.Hours, ts.Minutes, ts.Seconds,
             ts.Milliseconds / 10));
             Console.Read();
