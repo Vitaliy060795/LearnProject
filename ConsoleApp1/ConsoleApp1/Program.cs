@@ -47,6 +47,5 @@ namespace ConsoleApp1
             }
             return y;
         }
-
     }   
 }
