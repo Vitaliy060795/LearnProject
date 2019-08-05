@@ -23,7 +23,7 @@ namespace ConsoleApp1
             stopWatch.Start();
             //int temp = fib(num);
             int temp = fib_n(num);
-            Console.WriteLine("Release branch");
+            Console.WriteLine("Hotfix branch");
             stopWatch.Stop();
             TimeSpan ts = stopWatch.Elapsed;
             Console.WriteLine(string.Format("Fibonacci number of order {0} = {1}" + '\n' + "Elapsed time {2:00}:{3:00}:{4:00}.{5:00}", num,temp, ts.Hours, ts.Minutes, ts.Seconds,
