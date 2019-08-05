@@ -21,11 +21,11 @@ namespace ConsoleApp1
             Console.WriteLine("Enter integer values ​​to determine the order of the Fibonacci number using recursion: ");
             int.TryParse(Console.ReadLine(), out int num);
             stopWatch.Start();
-            //int temp = fib(num);
-            int temp = fib_n(4);
+            int temp = fib(num);
+            //int temp = fib_n(num);
             stopWatch.Stop();
             TimeSpan ts = stopWatch.Elapsed;
-            Console.WriteLine(string.Format("Fibonacci number of order {0} = {1}" + '\n' + "Elapsed time {1:00}:{2:00}:{3:00}.{4:00}", num, ts.Hours, ts.Minutes, ts.Seconds,
+            Console.WriteLine(string.Format("Fibonacci number of order {0} = {1}" + '\n' + "Elapsed time {2:00}:{3:00}:{4:00}.{5:00}", num,temp, ts.Hours, ts.Minutes, ts.Seconds,
             ts.Milliseconds / 10));
             Console.Read();
         }
